@@ -1,0 +1,121 @@
+<!-- Static Data-->
+
+<div class="search-bar">
+  <form>
+    <input type="text" placeholder="Search City Name.." name="city" />
+  </form>
+</div>
+<div class="container">
+  <div class="weather__top-part">
+    <img src="../assets/img/morning.jpg" alt="hot-picture" *ngIf="14 > 15" />
+    <img src="../assets/img/night.jpg" alt="cold-picture" *ngIf="14 <= 15" />
+    <div class="weather__top-part--data">
+      <div class="place">Dublin</div>
+      <div class="temp">{{ 14.4 | number: "1.0-0" }} °C</div>
+    </div>
+  </div>
+  <div class="weather__bottom-part">
+    <h3 class="weather__bottom-part--header">Today Weather</h3>
+    <div class="weather__bottom-part--contents">
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/temperature.png" alt="" />
+          <p>min</p>
+        </div>
+        <div class="item__info">10°C</div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/thermometer.png" alt="" />
+          <p>max</p>
+        </div>
+        <div class="item__info">10°C</div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/rain.png" alt="" />
+          <p>min</p>
+        </div>
+        <div class="item__info">10°C</div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/wind.png" alt="" />
+          <p>wind</p>
+        </div>
+        <div class="item__info">10°C</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="info"><p>I'm the best :)</p></div>
+<!-- <div class="search-bar">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Search City Name.."
+      name="city"
+      [(ngModel)]="cityName"
+    />
+  </form>
+</div>
+
+<div class="container" *ngIf="weatherData">
+  <div class="weather__top-part">
+    <img
+      src="../assets/img/morning.jpg"
+      alt="hot-picture"
+      *ngIf="weatherData.main.temp > 15"
+    />
+    <img
+      src="../assets/img/night.jpg"
+      alt="cold-picture"
+      *ngIf="weatherData.main.temp <= 15"
+    />
+    <div class="weather__top-part--data">
+      <div class="place">{{ weatherData.name }}</div>
+      <div class="temp">
+        {{ (5 / 9) * (weatherData.main.temp - 32) | number: "1.0-0" }} °C
+      </div>
+    </div>
+  </div>
+  <div class="weather__bottom-part">
+    <h3 class="weather__bottom-part--header">Today Weather</h3>
+    <div class="weather__bottom-part--contents">
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/temperature.png" alt="" />
+          <p>min</p>
+        </div>
+        <div class="item__info">
+          {{ (5 / 9) * (weatherData.main.temp_min - 32) | number: "1.0-0" }}
+        </div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/thermometer.png" alt="" />
+          <p>max</p>
+        </div>
+        <div class="item__info">
+          {{ (5 / 9) * (weatherData.main.temp_max - 32) | number: "1.0-0" }}
+        </div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/rain.png" alt="" />
+          <p>%</p>
+        </div>
+        <div class="item__info">{{ weatherData.main.humidity }}</div>
+      </div>
+      <div class="weather__bottom-part--contents--item">
+        <div class="item__pointed">
+          <img src="../assets/img/wind.png" alt="" />
+          <p>km/h</p>
+        </div>
+        <div class="item__info">{{ weatherData.wind.speed }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="info"><p>I'm the best :)</p></div> -->
+<router-outlet></router-outlet>
